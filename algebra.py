@@ -1,10 +1,14 @@
 import numpy as np
 from skimage import io
 import matplotlib.pyplot as plt
+from PIL import Image
 
-foto1 = np.zeros((4,4), np.uint8)
-foto2 = np.ones((4,4), np.uint8)
+foto = np.ones((100,100,3), np.uint8)
 
-plt.imshow(foto1)
-plt.imshow(foto2)
-plt.show()
+def diagonal_principal(foto):
+    for i in foto:
+        foto[i] = foto[i] * [255, 0, 0]
+    return foto
+foto = [5, 56, 20] * foto
+m = Image.fromarray(foto)
+m.save("1.png")
