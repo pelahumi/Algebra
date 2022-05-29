@@ -1,14 +1,10 @@
-# Convertir una imagen a un array
-# Importamos a misc
-from scipy import misc
-
-
-#Importamos matplotlib
+import numpy as np
+from skimage import io
 import matplotlib.pyplot as plt
 
-# Imagen en escala de grises
-gray = misc.face(gray=True)
+foto1 = np.zeros((4,4), np.uint8)
+foto2 = np.ones((4,4), np.uint8)
 
-# Mostramos la imagen
-plt.imshow(gray,cmap=plt.cm.gray)
+plt.imshow(foto1)
+plt.imshow(foto2)
 plt.show()
